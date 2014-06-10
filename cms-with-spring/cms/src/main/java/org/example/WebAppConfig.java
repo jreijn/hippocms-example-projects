@@ -9,7 +9,7 @@ public class WebAppConfig {
     @Bean
     public HelloService getHello(){
         final HelloServiceImpl helloService = new HelloServiceImpl();
-        helloService.setGlobalMessage("Hello World");
+        helloService.setGlobalMessage("Hello World from Spring");
         return helloService;
     }
 }
