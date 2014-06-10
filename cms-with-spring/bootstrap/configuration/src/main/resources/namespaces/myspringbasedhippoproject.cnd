@@ -1,0 +1,10 @@
+<'myspringbasedhippoproject'='http://www.onehippo.org/myspringbasedhippoproject/nt/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+
+[myspringbasedhippoproject:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document orderable
+
+[myspringbasedhippoproject:textdocument] > myspringbasedhippoproject:basedocument, hippostd:relaxed
+
+[myspringbasedhippoproject:newsdocument] > myspringbasedhippoproject:basedocument, hippostd:relaxed
