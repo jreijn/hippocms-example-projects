@@ -1,4 +1,4 @@
-package org.example;
+package org.example.spring;
 
 public class HelloServiceImpl implements HelloService {
 
@@ -15,8 +15,10 @@ public class HelloServiceImpl implements HelloService {
     public String getHelloMessage(String name) {
         if (name == null) {
             return globalMessage;
+        } else {
+            return globalMessage + " " +name;
         }
-        return name;
+
     }
 
 }
