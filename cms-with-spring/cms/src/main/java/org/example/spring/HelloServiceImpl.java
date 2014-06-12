@@ -1,5 +1,8 @@
 package org.example.spring;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class HelloServiceImpl implements HelloService {
 
     private String globalMessage = "Hello";

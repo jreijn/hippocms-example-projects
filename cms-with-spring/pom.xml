@@ -204,6 +204,7 @@
         <module>bootstrap</module>
         <module>cms</module>
         <module>site</module>
+        <module>spring</module>
       </modules>
     </profile>
 
@@ -251,6 +252,13 @@
                   <properties>
                     <context>/site</context>
                   </properties>
+                </deployable>
+                <deployable>
+                  <type>war</type>
+                  <properties>
+                    <context>/spring</context>
+                  </properties>
+                  <location>${project.basedir}/spring/target/spring.war</location>
                 </deployable>
               </deployables>
             </configuration>

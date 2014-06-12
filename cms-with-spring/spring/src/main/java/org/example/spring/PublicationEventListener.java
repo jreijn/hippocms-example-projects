@@ -18,9 +18,6 @@ public class PublicationEventListener {
     private static Logger log = LoggerFactory.getLogger(PublicationEventListener.class);
 
     @Autowired
-    private HelloService helloService;
-
-    @Autowired
     private HippoRepositoryService repositoryService;
 
     @Subscribe
@@ -29,9 +26,6 @@ public class PublicationEventListener {
             HippoWorkflowEvent workflowEvent = new HippoWorkflowEvent(event);
             if ("publish".equals(workflowEvent.methodName())) {
                 log.debug("document with id: {} was published", workflowEvent.subjectId());
-
-                final String helloMessage = helloService.getHelloMessage(workflowEvent.subjectId());
-                log.debug("Message from helloService: {}", helloMessage);
 
                 final Session session = repositoryService.getSession();
                 log.debug("Found node with path: {}", session.getNodeByIdentifier(workflowEvent.subjectId()).getPath());

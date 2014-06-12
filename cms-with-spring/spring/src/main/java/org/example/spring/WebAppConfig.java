@@ -27,10 +27,4 @@ public class WebAppConfig {
                 env.getProperty("repository.password"));
     }
 
-    @Bean
-    public HelloService getHello(){
-        final HelloServiceImpl helloService = new HelloServiceImpl();
-        helloService.setGlobalMessage("Hello World from Spring");
-        return helloService;
-    }
 }
